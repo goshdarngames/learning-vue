@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello</title>
+
+        <script src="vue.js"></script>
+
+
+    </head>
+    <body>
+
+        <div id="app">
+            <p>Value: {{ scaledVal }}</p>
+            <input type="range" v-model="val"></input>
+        </div>
+
+        <script type="text/javascript">
+            new Vue ({
+                el: '#app',
+                data : 
+                { 
+                    val : 50
+                },
+                computed :
+                {
+                    scaledVal: function() 
+                    {
+                        console.log(this.val);
+                        return this.val/100;
+                    }
+                }
+            })
+
+        </script>
+
+    </body>
+</html>
